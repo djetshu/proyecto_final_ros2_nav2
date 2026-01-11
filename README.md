@@ -4,8 +4,9 @@ Este proyecto final está diseñado para validar tus habilidades en la configura
 
 El objetivo es guiar al robot desde la generación de mapas (SLAM) hasta la ejecución de una lógica de misión de alto nivel (autonomía), pasando por la configuración fina de controladores y la evasión de obstáculos.
 
+<div align="center">
 <img src="assets/general.png" alt="Trayectorias" width="600"/>
-
+</div>
 ---
 
 ## Parte 1: Percepción y Simulación del Entorno
@@ -69,10 +70,13 @@ Añade 3 actores al archivo `.sdf`. Puedes usar el siguiente fragmento de códig
     </script>
 </actor>
 ```
-Observa la imagen a continuación; las flechas rojas bidireccionales indican las posiciones iniciales y finales aproximadas de los actores en el entorno simulado. Deberás estimar las coordenadas de esos puntos para configurar los waypoints en el archivo `.sdf`.
+Observa la imagen a continuación; las flechas rojas bidireccionales indican las posiciones iniciales y finales aproximadas de los actores. Deberás determinar manualmente las coordenadas de estos puntos para configurar los waypoints en el archivo .sdf.
 
-<img src="assets/trayectorias.png" alt="Trayectorias de Actores" width="600"/>
+Nota: Puedes obtener estas coordenadas manualmente abriendo Gazebo y observando la grilla, o moviendo temporalmente un objeto a las zonas indicadas para leer sus valores $(x, y)$. No se requiere precisión exacta ni algoritmos de estimación; basta con que la trayectoria se asemeje visualmente a la imagen de referencia.
 
+<div align="center">
+<img src="assets/actores.png" alt="Trayectorias de Actores" width="600"/>
+</div>
 ---
 
 ## Parte 2: Navegación Autónoma con Nav2
