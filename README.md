@@ -7,6 +7,7 @@ El objetivo es guiar al robot desde la generación de mapas (SLAM) hasta la ejec
 <div align="center">
 <img src="assets/general.png" alt="Trayectorias" width="600"/>
 </div>
+
 ---
 
 ## Parte 1: Percepción y Simulación del Entorno
@@ -16,14 +17,16 @@ En esta fase, prepararás el entorno virtual y lo digitalizarás para que el rob
 ### Tarea 1.1: Mapeo de Entornos (SLAM)
 
 Tu primer objetivo es generar mapas de ocupación 2D de alta calidad utilizando los mundos proporcionados en el paquete `bcr_bot/worlds`:
+
 1.  `tugbot_depot.sdf`
+<div align="center">
+<img src="assets/tugbot_depot.png" alt="Mundo Depósito" width="600"/>
+</div>
+
 2.  `tugbot_warehouse.sdf`
-
-1.  **`tugbot_depot.sdf`**
-    <img src="assets/tugbot_depot.png" alt="Mundo Depósito" width="600"/>
-
-2.  **`tugbot_warehouse.sdf`**
-    <img src="assets/tugbot_warehouse.png" alt="Mundo Almacén" width="600"/>
+<div align="center">
+<img src="assets/tugbot_warehouse.png" alt="Mundo Almacén" width="600"/>
+</div>
 
 Para analizar cómo la velocidad del robot afecta la calidad del mapa, realizarás el mapeo en dos condiciones diferentes para cada mundo:
 -   **Velocidad Estándar:** Velocidad lineal de `0.5 m/s` y velocidad angular de `0.7 rad/s`.
@@ -131,6 +134,10 @@ Crea un nuevo paquete llamado `bcr_bot_patrol` con el nodo o nodos necesarios pa
 - Punto 4 -> (0.0, 6.5)
 - Punto 5 -> (9.5, 6.5)
 - Punto 6 -> (9.5, -10.6)
+
+<div align="center">
+<img src="assets/trayectorias.png" alt="Trayectorias" width="600"/>
+</div>
 
 Se recomienda utilizar `nav2_simple_commander` para enviar los objetivos (goal poses) al robot. Puedes consultar la documentación oficial para inspirarte en la implementación: https://docs.nav2.org/commander_api/index.html
 
